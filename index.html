@@ -1,13 +1,13 @@
 <html>
 
 <script type="text/javascript">
-window.addEventListener('error', function(e) {
+window.addEventListener('warning', function(e) {
   if(!window.mixedContentErrors){
    window.mixedContentErrors = [];  
   }
   window.mixedContentErrors.push(e);
   console.log("hi");
-});
+}, true);
 
 </script>
 
