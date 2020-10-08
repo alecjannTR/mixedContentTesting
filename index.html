@@ -1,12 +1,13 @@
 <html>
 
 <script type="text/javascript">
-window.addEventListener(window.location.protocol == "http:", function(e) {
-   if(!window.mixedContentErrors){
-     window.mixedContentErrors = [];
-   }
-    window.mixedContentErrors.push(e);
-}, true);
+window.onerror = function(message, url, line, col, errorObj) {
+  if(!window.mixedContentErrors){
+   window.mixedContentErrors = [];  
+  }
+  window.mixedContentErrors.push(url);
+  console.log(message);
+};
 
 </script>
 
