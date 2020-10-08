@@ -1,0 +1,24 @@
+<html>
+
+<script type="text/javascript">
+window.addEventListener(window.location.protocol() == "http", function(e) {
+   if(!window.mixedContentErrors){
+     window.mixedContentErrors = [];
+   }
+    window.mixedContentErrors.push(e);
+}, true);
+
+</script>
+
+<body>
+  <img src="http://externalimg.com/file.jpeg"/>
+</body>
+
+<script>
+  setTimeout(function(){
+    console.log(window.mixedContentErrors);
+ }, 3000);
+</script>
+
+</html>
+
